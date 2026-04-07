@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@100;200;300;400;500;600&family=Pinyon+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ── */
+:root {
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-jost:      'Jost', sans-serif;
+  --font-pinyon:    'Pinyon Script', cursive;
+}
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-jost);
+  background-color: #F5F2ED;
+  color: #2C2520;
+  overflow-x: hidden;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #F5F2ED; }
+::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #A07840; }
+
+/* ── Section padding utility ── */
+@layer components {
+  .section-padding {
+    @apply px-6 md:px-12 py-20 md:py-28;
+  }
+}
+
+/* ── Selection colour ── */
+::selection {
+  background: rgba(201, 169, 110, 0.25);
+  color: #2C2520;
+}
